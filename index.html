@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mod Menu Pro</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      background: #1e1e1e;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+    }
+    .container img {
+      width: 80px;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      margin-bottom: 0.5rem;
+    }
+    input {
+      width: 100%;
+      padding: 0.8rem;
+      margin: 0.5rem 0;
+      border-radius: 8px;
+      border: none;
+    }
+    .checkbox {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+    }
+    button {
+      background: linear-gradient(to right, #ff416c, #ff4b2b);
+      border: none;
+      color: white;
+      padding: 0.8rem;
+      width: 100%;
+      border-radius: 8px;
+      margin-top: 1rem;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .footer {
+      margin-top: 1rem;
+      font-size: 0.8rem;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="https://cdn-icons-png.flaticon.com/512/3064/3064197.png" alt="Icon" />
+    <h2>Mod Menu Pro</h2>
+    <p>Đăng nhập để truy cập mod menu</p>
+    <input type="text" id="username" placeholder="Tên đăng nhập" />
+    <input type="password" id="password" placeholder="Mật khẩu" />
+    <div class="checkbox">
+      <label><input type="checkbox" /> Lưu đăng nhập</label>
+      <a href="#" style="color: #00d8ff;">Quên mật khẩu?</a>
+    </div>
+    <button onclick="login()">ĐĂNG NHẬP</button>
+    <div class="footer">Mod Menu Pro v2.0 | ThienNhanBa'Ro ⚡</div>
+  </div>
+
+  <script>
+    function login() {
+      const user = document.getElementById("username").value;
+      const pass = document.getElementById("password").value;
+      if (user === "thiennhanyeuxsang" && pass === "yeuxsang") {
+        alert("Đăng nhập thành công!");
+        // Chuyển sang trang menu thật (bạn có thể thay đổi URL dưới đây)
+        window.location.href = "https://nhandepzaihub.github.io/YeuXsang/";
+      } else {
+        alert("Sai tài khoản hoặc mật khẩu!");
+      }
+    }
+  </script>
+</body>
+</html>
